@@ -1,8 +1,7 @@
 import * as React from "react"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-export function Head({ title, description = "" }) {
+export function Head({ title, description }) {
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -21,7 +20,7 @@ export function Head({ title, description = "" }) {
   const defaultTitle = meta.title
 
   return (
-    <Helmet>
+    <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
@@ -32,6 +31,6 @@ export function Head({ title, description = "" }) {
       <meta name="twitter:creator" content={meta.author} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-    </Helmet>
+    </>
   )
 }
