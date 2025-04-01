@@ -1,36 +1,24 @@
+// src/components/seo.js
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
-export function Head({ title, description }) {
-  const { site } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-          siteUrl
-        }
-      }
-    }
-  `)
-
-  const meta = site.siteMetadata
-  const metaDescription = description || meta.description
-  const defaultTitle = meta.title
+export function Head({ title, description = "" }) {
+  const siteTitle = "AWS AI Study Guide"
+  const siteDescription = description || "Interactive learning for AWS AI"
+  const siteUrl = "https://saianeesh01.github.io/aws-ai-study-guide"
+  const author = "Aneesh Mussim"
 
   return (
     <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
+      <title>{title ? `${title} | ${siteTitle}` : siteTitle}</title>
+      <meta name="description" content={siteDescription} />
+      <meta property="og:title" content={title || siteTitle} />
+      <meta property="og:description" content={siteDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={meta.siteUrl} />
+      <meta property="og:url" content={siteUrl} />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={meta.author} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:creator" content={author} />
+      <meta name="twitter:title" content={title || siteTitle} />
+      <meta name="twitter:description" content={siteDescription} />
     </>
   )
 }
