@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[672],{206:function(t,e,n){n.r(e),n.d(e,{default:function(){return u}});var r=n(7294);function u(t){let{data:e}=t;return r.createElement("pre",null,JSON.stringify(e,null,2))}}}]);
+//# sourceMappingURL=component---src-pages-test-js-8fe6bcf5f35505e4e54a.js.map

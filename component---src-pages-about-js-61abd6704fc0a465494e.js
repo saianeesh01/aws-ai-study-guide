@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[682],{5465:function(e,t,a){a.r(t),a.d(t,{default:function(){return n}});var u=a(7294);function n(){return u.createElement("main",{className:"p-8"},u.createElement("h1",{className:"text-3xl font-bold mb-4"},"About"),u.createElement("p",null,"This is the About page for the AWS AI Study Guide."))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-61abd6704fc0a465494e.js.map
